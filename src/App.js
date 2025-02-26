@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from "./pages/HomePage";
+import React from 'react';
+import { Routes as Switch, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import { AuthContextProvider } from "./context/AuthContext";
+import { ToastContextProvider } from "./context/ToastContext";
+import Login from './pages/LoginPage';
+import Signup from './pages/SignupPage'
+
 
 function App() {
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Header/>
+      <HeroSection /> */}
+      <ToastContextProvider>
+      <AuthContextProvider>
+        <Layout>
+          <Switch>
+            <Route path="/" element={<Home/>} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Switch>
+        </Layout>
+      </AuthContextProvider>
+    </ToastContextProvider>
     </div>
   );
 }

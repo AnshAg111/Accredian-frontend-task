@@ -1,0 +1,120 @@
+/* Base styles for all screen sizes */
+.image {
+  display: block;
+  width: 100%;
+  max-width: 512px; /* Same as Tailwind's max-w-lg */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+  margin: 0 auto 20px auto; /* Center image horizontally & add spacing below */
+}
+
+/* Typography styles */
+.typography {
+  color: #1f2937; /* Dark text */
+  font-weight: 700; /* Bold font */
+  line-height: 1.25; /* Leading-tight */
+  margin-bottom: 16px; /* Add spacing */
+  font-size: 2rem; /* Large default size */
+  text-align: center; /* Center text */
+}
+
+.typographyh6 {
+  color: #4b5563; /* Gray text */
+  margin-top: 12px;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center; /* Center text */
+}
+
+.texthighlight {
+  color: #2563eb; /* Blue highlight */
+  font-weight: 700; /* Bold font */
+}
+
+/* Center the image container */
+.imgcontainer {
+  display: flex;
+  justify-content: center; /* Centers image horizontally */
+  align-items: center; /* Aligns vertically if needed */
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Center the button */
+.button {
+  display: flex;
+  justify-content: center; /* Centers button */
+  align-items: center;
+  margin: 20px auto; /* Centers button horizontally */
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* Ensure entire section is centered */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #e0f7fa;
+}
+
+/* RESPONSIVE STYLES */
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  .typography {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .typographyh6 {
+    font-size: 1rem; /* Smaller subtitle */
+  }
+
+  .image {
+    max-width: 300px; /* Reduce image size */
+  }
+
+  .button {
+    width: 80%; /* Make button full-width */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .typography {
+    font-size: 1.75rem;
+  }
+
+  .image {
+    max-width: 400px;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column; /* Keep everything stacked */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .imgcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Ensures image is centered */
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Keeps button centered */
+  }
+}

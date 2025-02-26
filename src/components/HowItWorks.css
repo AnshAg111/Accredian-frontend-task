@@ -1,0 +1,43 @@
+/* Main Container */
+.how-it-works-container {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f7f9fc;
+}
+
+/* Title */
+.section-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Steps Grid Container */
+.steps-container {
+  margin-top: 20px;
+}
+
+/* Step Box */
+.step-box {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Step Box Hover Effect */
+.step-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Step Title */
+.step-title {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Step Description */
+.step-description {
+  color: #555;
+  margin-top: 5px;
+}

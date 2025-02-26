@@ -1,0 +1,40 @@
+/* FAQ Section Container */
+.faq-container {
+    padding: 50px 0;
+    background-color: #f7f9fc;
+  }
+  
+  /* Section Title */
+  .faq-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Accordion */
+  .faq-accordion {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Accordion Summary */
+  .faq-summary {
+    background-color: white;
+    transition: background 0.3s;
+  }
+  
+  .faq-summary:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* FAQ Question */
+  .faq-question {
+    font-weight: 500;
+  }
+  
+  /* FAQ Answer */
+  .faq-answer {
+    color: #333;
+  }
+  
