@@ -10,6 +10,7 @@ import { useContext } from "react";
 import ToastContext from "../context/ToastContext";
 
 const Home = () => {
+  const base_url=process.env.REACT_BASE_URL;
   const { toast } = useContext(ToastContext);
   
   const [open, setOpen] = useState(false);
@@ -42,7 +43,7 @@ const Home = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/referrals", {
+      const response = await fetch(`${base_url}/api/referrals`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

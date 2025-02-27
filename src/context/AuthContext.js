@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ToastContext from "./ToastContext";
 
 const AuthContext = createContext();
+const base_url=process.env.REACT_BASE_URL;
 
 export const AuthContextProvider = ({ children }) => {
   const { toast } = useContext(ToastContext);
@@ -16,7 +17,7 @@ export const AuthContextProvider = ({ children }) => {
   const checkUserLoggedIn = async () => {
     setLoading(true); 
     try {
-      const res = await fetch(`http://localhost:8000/api/me`, {
+      const res = await fetch(`${base_url}/api/me`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -52,7 +53,7 @@ export const AuthContextProvider = ({ children }) => {
   }, [user, loading]);
   const loginUser = async (userData) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/login`, {
+      const res = await fetch(`${base_url}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +75,7 @@ export const AuthContextProvider = ({ children }) => {
   };
   const registerUser = async (userData) => {
     try {
-      const res = await fetch(`http://localhost:8000/api/signup`, {
+      const res = await fetch(`${base_url}/api/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
